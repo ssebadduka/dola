@@ -54,12 +54,12 @@
                 </div>
             </div>
                     <div class="blog-content">
-                        <a href="blog-item.html"><h3>{{pray.English_Prayer}}</h3></a>
+                        <a href="{% url 'detail' pray.slug %}"><h3>{{pray.English_Prayer}}</h3></a>
                         <div class="entry-meta">
                             <span><i class="icon-user"></i> <a href="#">{{pray.Book}}</a></span>
                             <span><i class="icon-folder-close"></i> <a href="#">Posted by &nbsp;{{pray.Posted_by}}</a></span>
                             <span><i class="icon-calendar"></i> {{pray.Date_Created}}</span>
-                            <span><i class="icon-comment"></i> <a href="#">3 Comments</a></span>
+                            <!-- <span><i class="icon-comment"></i> <a href="#">3 Comments</a></span> -->
                         </div>
                         <p>{{pray.Adhola_Prayer}}&nbsp;({{pray.Book}})</p>
                         <a class="btn btn-default" href="{% url 'detail' pray.slug %}">Read More <i class="icon-angle-right"></i></a>
@@ -68,7 +68,7 @@
                 {% endfor %}
                 <!--/.blog-item-->
                <!--/.blog-item-->
-                <ul class="pagination pagination-lg">
+                <!-- <ul class="pagination pagination-lg">
                     <li><a href="#"><i class="icon-angle-left"></i></a></li>
                     <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
@@ -76,14 +76,15 @@
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>
                     <li><a href="#"><i class="icon-angle-right"></i></a></li>
-                </ul><!--/.pagination-->
-                <div class="tags">
+                </ul> -->
+                <!--/.pagination-->
+                <!-- <div class="tags">
                     <i class="icon-tags"></i> Tags <a class="btn btn-xs btn-primary" href="#">CSS3</a> <a class="btn btn-xs btn-primary" href="#">HTML5</a> <a class="btn btn-xs btn-primary" href="#">WordPress</a> <a class="btn btn-xs btn-primary" href="#">Joomla</a>
                 </div>
                 
-                <p>&nbsp;</p>
+                <p>&nbsp;</p> -->
                 
-                <div class="author well">
+                <!-- <div class="author well">
                     <div class="media">
                         <div class="pull-left">
                             <img class="avatar img-thumbnail" src="{% static 'images/blog/avatar.jpg' %} " alt="">
@@ -95,24 +96,25 @@
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
                         </div>
                     </div>
-                </div><!--/.author-->
+                </div> -->
+                <!--/.author-->
                 
                 <div id="comments">
                     <div id="comments-list">
-                        <h3>3 Comments</h3>
+                        <!-- <h3>3 Comments</h3> -->
                         <div class="media">
-                            <div class="pull-left">
+                            <!-- <div class="pull-left">
                                 <img class="avatar img-circle" src="{% static 'images/blog/avatar1.png' %} " alt="">
-                            </div>
+                            </div> -->
                             <div class="media-body">
-                                <div class="well">
+                                <!-- <div class="well">
                                     <div class="media-heading">
                                         <strong>John Doe</strong>&nbsp; <small>27 Aug 2013</small>
                                         <a class="pull-right" href="#"><i class="icon-repeat"></i> Reply</a>
                                     </div>
                                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                                </div>
-                                <div class="media">
+                                </div> -->
+                                <!-- <div class="media">
                                     <div class="pull-left">
                                         <img class="avatar img-circle" src="{% static 'images/blog/avatar3.png' %} " alt="">
                                     </div>
@@ -125,10 +127,11 @@
                                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
                                         </div>
                                     </div>
-                                </div><!--/.media-->
+                                </div> -->
+                                <!--/.media-->
                             </div>
                         </div><!--/.media-->
-                        <div class="media">
+                        <!-- <div class="media">
                             <div class="pull-left">
                                 <img class="avatar img-circle" src="{% static 'images/blog/avatar2.png' %} " alt="">
                             </div>
@@ -141,14 +144,15 @@
                                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                                 </div>
                             </div>
-                        </div><!--/.media-->
+                        </div> -->
+                        <!--/.media-->
                     </div><!--/#comments-list-->  
                 
                     <div id="comment-form">
-                        <h3>Leave a comment</h3>
-                        <form class="form-horizontal" role="form" action="coment" method="POST">
+                        <!-- <h3>Leave a comment</h3> -->
+                        <!-- <form class="form-horizontal" role="form" action="coment" method="POST">
                             {% csrf_token %}
-                              <!-- {% include 'detail/form-template.html' %} -->
+                             
                             <div class="form-group">
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control" placeholder="Name">
@@ -163,8 +167,9 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-danger btn-lg">Submit Comment</button>
-                        </form>
-                    </div><!--/#comment-form-->
+                        </form> -->
+                    </div>
+                    <!--/#comment-form-->
                 </div><!--/#comments-->
                 
             </div>
@@ -179,8 +184,8 @@
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <h4>About Us</h4>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                <p>Pellentesque habitant morbi tristique senectus.</p>
+                <p>Adhola_Prayer.</p>
+                <p>Adhola_Prayer.</p>
             </div><!--/.col-md-3-->
 
             <div class="col-md-3 col-sm-6">
@@ -208,8 +213,8 @@
                             <img src="{% static 'images/blog/thumb1.jpg' %}" alt="">
                         </div>
                         <div class="media-body">
-                            <span class="media-heading"><a href="#">Pellentesque habitant morbi tristique senectus</a></span>
-                            <small class="muted">Posted 17 Aug 2013</small>
+                            <span class="media-heading"><a href="#">Adhola_Prayer</a></span>
+                            <small class="muted">Posted 17 Aug 2021</small>
                         </div>
                     </div>
                     <div class="media">
@@ -217,8 +222,8 @@
                             <img src="{% static 'images/blog/thumb2.jpg' %}" alt="">
                         </div>
                         <div class="media-body">
-                            <span class="media-heading"><a href="#">Pellentesque habitant morbi tristique senectus</a></span>
-                            <small class="muted">Posted 13 Sep 2013</small>
+                            <span class="media-heading"><a href="#">Adhola_Prayer</a></span>
+                            <small class="muted">Posted 13 Sep 2021</small>
                         </div>
                     </div>
                     <div class="media">
@@ -226,8 +231,8 @@
                             <img src="{% static 'images/blog/thumb3.jpg' %}" alt="">
                         </div>
                         <div class="media-body">
-                            <span class="media-heading"><a href="#">Pellentesque habitant morbi tristique senectus</a></span>
-                            <small class="muted">Posted 11 Jul 2013</small>
+                            <span class="media-heading"><a href="#">Adhola_Prayer</a></span>
+                            <small class="muted">Posted 11 Jul 2021</small>
                         </div>
                     </div>
                 </div>  
@@ -237,9 +242,9 @@
                 <h4>Address</h4>
                 <address>
                     <strong>Twitter, Inc.</strong><br>
-                    795 Folsom Ave, Suite 600<br>
-                    San Francisco, CA 94107<br>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                    uganda<br>
+                   kampala<br>
+                    <abbr title="Phone">P:</abbr> (+256) 456-7890
                 </address>
                 <h4>Newsletter</h4>
                 <form role="form">
