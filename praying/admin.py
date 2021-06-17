@@ -2,7 +2,9 @@ from django.contrib import admin
 from .models import Pray_tb,Comment
 
 
-
+admin.site.site_header = "Adhola Prayer App"
+admin.site.site_title = "Adhola Prayer App"
+admin.site.index_title = "Adhola Prayer App"
 # admin.site.register(Pray_tb)
 @admin.register(Pray_tb)
 class UserAdmin(admin.ModelAdmin):
