@@ -1,1 +1,0 @@
-web: gunicorn prayingapp.wsgi --log-file -
